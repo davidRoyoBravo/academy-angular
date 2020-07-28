@@ -1,7 +1,18 @@
+/*Colors*/
+
+$ligthteal: #49beb7;
+$white: #fff;
+$orange: #f5a623;
+
+/*other vars*/
+
 $titles-font: 'Red Rose',
 cursive;
+
+/*mixins*/
+
 @mixin title {
     font-family: $titles-font;
     font-size: 20px;
-    padding: 10px;
+    padding-top: 5px;
 }

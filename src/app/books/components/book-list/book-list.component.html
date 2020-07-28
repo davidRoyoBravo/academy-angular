@@ -1,1 +1,7 @@
-<p>book-list works!</p>
+<section id="booklist" class="container">
+    <div class="row">
+        <div class="col-4" *ngFor="let book of books">
+            <app-card [author]="book.author" [name]="book.name" [imageUrl]="book.imageUrl"></app-card>
+        </div>
+    </div>
+</section>

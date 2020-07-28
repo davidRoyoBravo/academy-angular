@@ -1,5 +1,12 @@
 @import "../../variables";
 header {
-    background-color: lightseagreen;
+    background-color: $ligthteal;
+    height: 42px;
     @include title;
+    .row {
+        margin: 0;
+        div {
+            padding: 0;
+        }
+    }
 }

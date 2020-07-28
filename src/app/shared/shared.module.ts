@@ -9,6 +9,6 @@ import { HeaderComponent } from './components/header/header.component';
 @NgModule({
   declarations: [ActionItemComponent, HeaderComponent],
   imports: [CommonModule],
-  exports: [HeaderComponent]
+  exports: [HeaderComponent, ActionItemComponent],
 })
 export class SharedModule {}
