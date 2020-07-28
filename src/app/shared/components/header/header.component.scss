@@ -1,0 +1,6 @@
+@import "../../variables";
+header.container {
+    background-color: lightseagreen;
+    border-radius: 5px;
+    @include title;
+}
