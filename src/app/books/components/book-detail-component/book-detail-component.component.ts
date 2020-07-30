@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BookService } from '../../services/book.service';
 import { IBook } from '../../models/book';
-import { Observable } from 'rxjs';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-book-detail-component',
@@ -10,14 +10,15 @@ import { Observable } from 'rxjs';
 })
 export class BookDetailComponentComponent implements OnInit {
   book: IBook;
-  constructor(private bookService: BookService) { }
+  constructor(private bookService: BookService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.getInfo();
+    this.getInfo(this.route.snapshot.params.id);
   }
 
-  getInfo(): void{
-    this.bookService.getBook(1).subscribe(
+  getInfo(id: string): void{
+    // tslint:disable-next-line: radix
+    this.bookService.getBook( parseInt(id) ).subscribe(
       (data: IBook) => { this.book = data; }
     );
   }
