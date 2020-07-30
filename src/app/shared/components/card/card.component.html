@@ -1,7 +1,9 @@
-<div class="card m-0 p-0">
-    <img class="card-img-top" src="{{ this.imageUrl }}" alt="Card image cap">
-    <div class="card-body">
-        <h5 class="card-title">{{ this.name }}</h5>
-        <p class="card-text">{{ this.author }}</p>
+<a [routerLink]="['/details', this.id]">
+    <div class="card m-0 p-0">
+        <img class="card-img-top" src="{{ this.imageUrl }}" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">{{ this.name }}</h5>
+            <p class="card-text">{{ this.author }}</p>
+        </div>
     </div>
-</div>
+</a>
